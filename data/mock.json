@@ -1,0 +1,226 @@
+{
+  "category": "디저트",
+  "collectedAt": "2026-09-27",
+  "keywordGroups": [
+    {
+      "id": 1,
+      "term": "마카롱",
+      "rank": 1,
+      "relativeRatio": 100.0,
+      "images": [
+        {
+          "id": 1,
+          "source": "unsplash",
+          "sourceId": "1558326567-98ae2405596b",
+          "imageUrl": "https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/macaron",
+          "width": 1,
+          "height": 1
+        },
+        {
+          "id": 2,
+          "source": "unsplash",
+          "sourceId": "1558024920-b41e1887dc32",
+          "imageUrl": "https://images.unsplash.com/photo-1558024920-b41e1887dc32?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/macaron",
+          "width": 4,
+          "height": 5
+        },
+        {
+          "id": 3,
+          "source": "unsplash",
+          "sourceId": "1569864358642-9d1684040f43",
+          "imageUrl": "https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/macaron",
+          "width": 2,
+          "height": 3
+        },
+        {
+          "id": 4,
+          "source": "unsplash",
+          "sourceId": "1612198790700-0ff08cb726e5",
+          "imageUrl": "https://images.unsplash.com/photo-1612198790700-0ff08cb726e5?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/macaron",
+          "width": 4,
+          "height": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "term": "티라미수",
+      "rank": 2,
+      "relativeRatio": 86.4,
+      "images": [
+        {
+          "id": 5,
+          "source": "unsplash",
+          "sourceId": "1571877227200-a0d98ea607e9",
+          "imageUrl": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/tiramisu",
+          "width": 3,
+          "height": 4
+        },
+        {
+          "id": 6,
+          "source": "unsplash",
+          "sourceId": "1639744211487-b27e3551b07c",
+          "imageUrl": "https://images.unsplash.com/photo-1639744211487-b27e3551b07c?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/tiramisu",
+          "width": 1,
+          "height": 1
+        },
+        {
+          "id": 7,
+          "source": "unsplash",
+          "sourceId": "1568627175730-73d05bd69ca9",
+          "imageUrl": "https://images.unsplash.com/photo-1568627175730-73d05bd69ca9?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/tiramisu",
+          "width": 4,
+          "height": 5
+        },
+        {
+          "id": 8,
+          "source": "unsplash",
+          "sourceId": "1567608286687-394db5f7520a",
+          "imageUrl": "https://images.unsplash.com/photo-1567608286687-394db5f7520a?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/tiramisu",
+          "width": 2,
+          "height": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "term": "크루아상",
+      "rank": 3,
+      "relativeRatio": 72.1,
+      "images": [
+        {
+          "id": 9,
+          "source": "unsplash",
+          "sourceId": "1623334044303-241021148842",
+          "imageUrl": "https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/croissant",
+          "width": 4,
+          "height": 3
+        },
+        {
+          "id": 10,
+          "source": "unsplash",
+          "sourceId": "1599940778173-e276d4acb2bb",
+          "imageUrl": "https://images.unsplash.com/photo-1599940778173-e276d4acb2bb?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/croissant",
+          "width": 3,
+          "height": 4
+        },
+        {
+          "id": 11,
+          "source": "unsplash",
+          "sourceId": "1555507036-ab1f4038808a",
+          "imageUrl": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/croissant",
+          "width": 1,
+          "height": 1
+        },
+        {
+          "id": 12,
+          "source": "unsplash",
+          "sourceId": "1530610476181-d83430b64dcd",
+          "imageUrl": "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/croissant",
+          "width": 4,
+          "height": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "term": "도넛",
+      "rank": 4,
+      "relativeRatio": 58.9,
+      "images": [
+        {
+          "id": 13,
+          "source": "unsplash",
+          "sourceId": "1551024601-bec78aea704b",
+          "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/donut",
+          "width": 2,
+          "height": 3
+        },
+        {
+          "id": 14,
+          "source": "unsplash",
+          "sourceId": "1533910534207-90f31029a78e",
+          "imageUrl": "https://images.unsplash.com/photo-1533910534207-90f31029a78e?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/donut",
+          "width": 4,
+          "height": 3
+        },
+        {
+          "id": 15,
+          "source": "unsplash",
+          "sourceId": "1527515545081-5db817172677",
+          "imageUrl": "https://images.unsplash.com/photo-1527515545081-5db817172677?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/donut",
+          "width": 3,
+          "height": 4
+        },
+        {
+          "id": 16,
+          "source": "unsplash",
+          "sourceId": "1514517521153-1be72277b32f",
+          "imageUrl": "https://images.unsplash.com/photo-1514517521153-1be72277b32f?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/donut",
+          "width": 1,
+          "height": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "term": "치즈케이크",
+      "rank": 5,
+      "relativeRatio": 41.3,
+      "images": [
+        {
+          "id": 17,
+          "source": "unsplash",
+          "sourceId": "1524351199678-941a58a3df50",
+          "imageUrl": "https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/cheesecake",
+          "width": 4,
+          "height": 5
+        },
+        {
+          "id": 18,
+          "source": "unsplash",
+          "sourceId": "1567171466295-4afa63d45416",
+          "imageUrl": "https://images.unsplash.com/photo-1567171466295-4afa63d45416?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/cheesecake",
+          "width": 2,
+          "height": 3
+        },
+        {
+          "id": 19,
+          "source": "unsplash",
+          "sourceId": "1578775887804-699de7086ff9",
+          "imageUrl": "https://images.unsplash.com/photo-1578775887804-699de7086ff9?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/cheesecake",
+          "width": 4,
+          "height": 3
+        },
+        {
+          "id": 20,
+          "source": "unsplash",
+          "sourceId": "1533134242443-d4fd215305ad",
+          "imageUrl": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=75",
+          "sourcePageUrl": "https://unsplash.com/s/photos/cheesecake",
+          "width": 3,
+          "height": 4
+        }
+      ]
+    }
+  ]
+}
