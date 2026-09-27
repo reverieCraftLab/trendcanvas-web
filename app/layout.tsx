@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_KR } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,6 +21,13 @@ const notoSansKr = Noto_Sans_KR({
   preload: false,
 });
 
+// 큰 제목용 명조체. 매거진 표지 같은 인상을 주는 핵심 요소라 제목에만 쓴다.
+const notoSerifKr = Noto_Serif_KR({
+  variable: "--font-noto-serif-kr",
+  weight: ["500", "700"],
+  preload: false,
+});
+
 export const metadata: Metadata = {
   title: "TrendCanvas",
   description: "요즘 뜨는 디저트 트렌드를 한눈에 보는 갤러리",
@@ -30,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="ko"
-      className={`${geistSans.variable} ${geistMono.variable} ${notoSansKr.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${notoSansKr.variable} ${notoSerifKr.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

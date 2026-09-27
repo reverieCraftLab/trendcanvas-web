@@ -1,22 +1,27 @@
 @import "tailwindcss";
 
+/*
+  종이 질감의 따뜻한 미색 배경 + 먹색 글씨.
+  순백/순흑 대신 살짝 누런 톤을 써야 인쇄 매거진 같은 느낌이 난다.
+  다크 모드는 두지 않는다. 사진 위주 화면이라 배경색이 브랜드 인상을 좌우해서 한 가지로 고정했다.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f1ea;
+  --foreground: #1c1a17;
+  --muted: #8b8479;
+  --line: #d9d2c5;
+  --placeholder: #e6dfd3;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-placeholder: var(--placeholder);
   --font-sans: var(--font-geist-sans), var(--font-noto-sans-kr);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-serif: var(--font-noto-serif-kr), serif;
+  --font-mono: var(--font-geist-mono), var(--font-noto-sans-kr);
 }
 
 body {
@@ -27,12 +32,19 @@ body {
 
 /* react-masonry-css는 flex로 열을 만든다. 열 사이 간격은 margin, 열 안쪽 간격은 padding으로 준다 */
 .masonry-grid {
+  --gutter: 0.75rem;
   display: flex;
-  margin-left: -1rem;
+  margin-left: calc(var(--gutter) * -1);
   width: auto;
 }
 
 .masonry-column {
-  padding-left: 1rem;
+  padding-left: var(--gutter);
   background-clip: padding-box;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    --gutter: 1.25rem;
+  }
 }

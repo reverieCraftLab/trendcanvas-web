@@ -16,6 +16,8 @@ const breakpointColumns = {
   640: 2,
 };
 
+const pad = (n: number) => String(n).padStart(2, "0");
+
 export default function TrendGallery({ items }: { items: GalleryItem[] }) {
   return (
     <Masonry
@@ -37,32 +39,35 @@ function GalleryCard({ item, priority }: { item: GalleryItem; priority: boolean 
   if (failed) return null;
 
   return (
-    <figure className="mb-4 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 dark:bg-zinc-900 dark:ring-white/10">
-      {/* aspect-ratio로 높이를 미리 잡아둬야 이미지 로딩 중에 카드가 밀리지 않는다 */}
-      <div className="relative" style={{ aspectRatio: `${item.width} / ${item.height}` }}>
+    // 카드 테두리와 그림자를 없앴다. 사진 자체가 카드 역할을 하게 두는 게 매거진 느낌의 핵심이다.
+    <figure className="group mb-6 sm:mb-8">
+      {/* aspect-ratio로 높이를 미리 잡아둬야 이미지 로딩 중에 카드가 밀리지 않는다.
+          로딩 전에는 배경과 비슷한 톤의 빈 면을 보여준다 */}
+      <div
+        className="relative overflow-hidden rounded-[3px] bg-placeholder"
+        style={{ aspectRatio: `${item.width} / ${item.height}` }}
+      >
         <Image
           src={item.imageUrl}
           alt={`${item.term} 사진`}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
           priority={priority}
           onError={() => setFailed(true)}
         />
       </div>
-      <figcaption className="flex items-center gap-2 px-3 py-2.5">
-        <span className="rounded-full bg-rose-100 px-2 py-0.5 text-xs font-semibold text-rose-700 dark:bg-rose-500/20 dark:text-rose-200">
-          {item.rank}위
-        </span>
-        <span className="text-sm font-medium">{item.term}</span>
+      <figcaption className="mt-2.5 flex items-baseline gap-2 text-[13px]">
+        <span className="font-mono text-[11px] text-muted">{pad(item.rank)}</span>
+        <span className="font-medium">{item.term}</span>
         {item.sourcePageUrl && (
           <a
             href={item.sourcePageUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-auto text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200"
+            className="ml-auto font-mono text-[10px] uppercase tracking-wider text-muted opacity-0 transition-opacity group-hover:opacity-100 focus:opacity-100"
           >
-            {item.source}
+            {item.source} ↗
           </a>
         )}
       </figcaption>
