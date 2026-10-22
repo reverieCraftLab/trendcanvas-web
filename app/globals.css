@@ -29,22 +29,3 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), var(--font-noto-sans-kr), sans-serif;
 }
-
-/* react-masonry-css는 flex로 열을 만든다. 열 사이 간격은 margin, 열 안쪽 간격은 padding으로 준다 */
-.masonry-grid {
-  --gutter: 0.75rem;
-  display: flex;
-  margin-left: calc(var(--gutter) * -1);
-  width: auto;
-}
-
-.masonry-column {
-  padding-left: var(--gutter);
-  background-clip: padding-box;
-}
-
-@media (min-width: 640px) {
-  .masonry-grid {
-    --gutter: 1.25rem;
-  }
-}

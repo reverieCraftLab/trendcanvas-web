@@ -1,35 +1,29 @@
-// 백엔드 스키마(keyword_group → image)와 같은 모양의 응답 타입.
-// Spring Boot 조회 API가 준비되면 이 타입을 API 응답 DTO에 맞춰 그대로 재사용한다.
+// 백엔드(trendcanvas) API 응답 타입. 네이버 값은 가공하지 않고 그대로 받는다(NFR-05).
 
-export type TrendImage = {
+// GET /api/desserts/home: 홈에 보여줄 디저트. 이미지는 따로 받는다.
+export type Dessert = {
   id: number;
-  source: string; // image.source
-  sourceId: string | null; // image.source_id
-  imageUrl: string; // image.image_url
-  sourcePageUrl: string | null; // image.source_page_url
-  // 아래 두 값은 아직 DB 스키마에 없다.
-  // 매소너리 그리드는 이미지가 로딩되기 전에 카드 높이를 알아야 레이아웃이 튀지 않아서
-  // image 테이블에 width/height 컬럼 추가를 검토해야 한다.
-  width: number;
-  height: number;
+  keyword: string; // 화면에 보이면서 네이버 검색에도 쓰는 이름
 };
 
-export type KeywordGroup = {
-  id: number;
-  term: string; // candidate_term.term
-  rank: number;
-  relativeRatio: number; // keyword_group.relative_ratio
-  images: TrendImage[];
+// 네이버 이미지 검색 결과 한 장.
+export type NaverImageItem = {
+  // 네이버가 준 그대로다. 검색어를 감싼 HTML 태그가 섞일 수 있으므로 HTML로 해석하지 않는다(XSS 방지).
+  // 그래서 alt 속성처럼 글자로만 쓰고, dangerouslySetInnerHTML에는 넣지 않는다.
+  title: string;
+  // 원본 이미지 주소. http://일 수 있어 우리 사이트(https)의 <img>에는 쓰지 않고 '원본 링크'로만 쓴다.
+  link: string;
+  // 작은 미리보기. https://search.pstatic.net/... 라서 <img>에 쓸 수 있다.
+  thumbnail: string;
+  // 원본 크기. 네이버가 문자열로 준다. 이미지가 로딩되기 전에 칸의 높이를 잡는 데만 쓴다.
+  sizeheight: string;
+  sizewidth: string;
 };
 
-export type TrendResponse = {
-  category: string;
-  collectedAt: string;
-  keywordGroups: KeywordGroup[];
-};
-
-// 그리드에 뿌리는 카드 한 장. 이미지 하나에 자기가 속한 키워드 정보를 붙인 형태.
-export type GalleryItem = TrendImage & {
-  term: string;
-  rank: number;
+// GET /api/images 응답
+export type ImageSearchResponse = {
+  total: number;
+  start: number;
+  display: number;
+  items: NaverImageItem[];
 };
