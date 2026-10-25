@@ -26,7 +26,7 @@
 
 - 브라우저가 백엔드를 직접 부른다(D-15, 경로 A). 홈 접속 → `GET /api/desserts/home`으로 디저트 3개 → 디저트마다 `GET /api/images?keyword=&start=`를 따로 호출해 열을 채운다.
 - 백엔드 주소는 `NEXT_PUBLIC_API_BASE_URL`(기본 `http://localhost:8080`). 이 변수는 브라우저에 공개되므로 비밀 값을 넣지 않는다.
-- `lib/api.ts`: 백엔드 호출. `lib/types.ts`: 응답 타입. `app/components/HomeGallery.tsx`: 홈(열 3개, 검색). `ImageFeed.tsx`: 키워드 하나의 이미지 목록과 무한 스크롤.
+- `lib/api.ts`: 백엔드 호출. `lib/types.ts`: 응답 타입. `lib/useImageBuffer.ts`: 키워드 하나의 이미지를 10장씩 받아 쌓는 훅. `lib/useColumns.ts`: 화면 폭에 따른 칸 수. `app/components/HomeGallery.tsx`: 홈(묶음을 아래로 이어 붙임, 검색). `LBlock.tsx`: ㄱ자 묶음(디저트 한 개가 ㄱ자 한 겹, 안쪽으로 한 겹씩 작아짐). `ImageFeed.tsx`: 검색 결과 목록. `ImageCard.tsx`, `ImageError.tsx`: 공통 조각.
 
 ## 지켜야 할 것
 
