@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 먹색 바탕(--foreground)에 미색(--background) ㄱ자와 작은 사각형. 홈의 ㄱ자 묶음 배치를 단순화한 모양이다. -->
+  <rect width="64" height="64" rx="14" fill="#1c1a17"/>
+  <path d="M13 13H51V51H38V26H13Z" fill="#f5f1ea"/>
+  <rect x="13" y="35" width="16" height="16" fill="#d9d2c5"/>
+</svg>

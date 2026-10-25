@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
 import "./globals.css";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,9 +29,24 @@ const notoSerifKr = Noto_Serif_KR({
   preload: false,
 });
 
+// 검색엔진과 링크 미리보기(카카오톡, 슬랙 등)가 읽는 정보다.
+// metadataBase는 아래의 상대 경로('/')를 완전한 주소로 바꿀 때 쓰는 기준이다.
 export const metadata: Metadata = {
-  title: "TrendCanvas",
-  description: "요즘 뜨는 디저트 트렌드를 한눈에 보는 갤러리",
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_TITLE, template: `%s | ${SITE_NAME}` },
+  description: SITE_DESCRIPTION,
+  // 같은 페이지가 여러 주소로 열려도(예: Vercel 임시 주소) 대표 주소는 하나라고 알려 준다.
+  alternates: { canonical: "/" },
+  // 링크를 공유할 때 보이는 미리보기. 이미지는 아직 없어서 제목과 설명만 둔다.
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
